@@ -1,0 +1,123 @@
+@font-face {
+    font-family: MiFuente;
+    src: url("/fonts/Mukta-Regular.ttf") format("opentype");
+}
+@font-face {
+    font-family: MiFuente2;
+    src: url("/fonts/MochiyPopPOne-Regular.ttf") format("opentype");
+}
+
+body{
+    background: #0f2033;
+    margin: 0%;
+    border: 0ch;
+    padding: 0%;
+}
+
+.off{
+    display: none;
+}
+
+h1{
+    font-family: MiFuente2;
+    color: rgb(70, 178, 197);
+}
+h2{
+    font-family: MiFuente2;
+    color: rgb(70, 178, 197);
+}
+header{
+    width: 1fr;
+    height: 15vh;
+    margin: 0%;
+    border: 0ch;
+    padding: 0%;
+    text-align: center;
+}
+
+header input{
+    font-family: MiFuente;
+    font-size: 1em;
+}
+header button{
+    font-family: MiFuente;
+    font-size: 1em;
+    width: 10em;
+    background: rgba(105, 1, 1, 0);
+    color: rgb(70, 178, 197);
+    border-color: rgb(70, 178, 197);
+}
+header button:hover{
+    background: rgb(70, 178, 197);
+    color: rgb(255, 255, 255);
+}
+
+.Contenedor{
+    width: 1fr;
+    height: 77vh;
+    display: grid;
+    grid-gap: 1em;
+    grid-auto-rows: 25rem;
+    grid-template-columns: repeat(auto-fill,minmax(20rem,1fr));
+    overflow:scroll;
+    
+}
+.divC{
+    display: grid;
+    grid-template-rows: repeat(2,50%);
+    padding: 10px;
+    background: #225ea3;
+    max-width: 100%;
+    text-align:center;
+    
+}
+.divC:hover{
+    background: #225ea391;
+}
+.divImg img{
+ max-width: 90%;
+}
+
+.divDec{
+    
+    word-wrap: break-word;
+    overflow: auto;
+}
+
+p{
+    font-family: MiFuente;
+    color: antiquewhite;
+    max-width: 100%;
+    font-size: 1em;
+    
+}
+
+@media screen and (max-height:750px) {
+    h1{
+        font-size: max(5vh,180%);
+    }
+    header{
+        display: grid;
+        grid-template-columns: 25% 75%;
+        grid-template-rows: 25% 50% 25%;
+        min-height: 5em;
+    }
+    .buscador{
+        display: grid;
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 2;
+        grid-row-end: 3;
+        grid-column-gap: 10px;
+        grid-template-columns: 50% 20%;
+    }
+
+    .buscador input{
+        height: 7vh;
+        min-height: 2.5em;
+    }
+    .buscador button{
+        height: 7vh;
+        min-height: 2.9em;
+    }
+}
